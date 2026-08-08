@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #F7F5F2;
+  color: #111111;
+  line-height: 1.6;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #1a1a1a; }
+::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #C9A227; }
+
+/* ===== BUTTONS ===== */
+button {
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+button:hover { opacity: 0.9; transform: translateY(-1px); }
+button:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+/* ===== INPUTS ===== */
+input, select, textarea {
+  font-family: 'Inter', sans-serif;
+  border: 1.5px solid #ECECEC;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #111111;
+  background: #ffffff;
+  transition: border-color 0.2s ease;
+  width: 100%;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #C8A95B;
+  box-shadow: 0 0 0 3px rgba(200,169,91,0.1);
+}
+
+input::placeholder, textarea::placeholder {
+  color: #aaa;
+}
+
+select option {
+  background: #ffffff;
+  color: #111111;
+}
+
+/* ===== LINKS ===== */
+a { color: #C8A95B; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ===== TYPOGRAPHY ===== */
+h1 { font-size: 28px; font-weight: 700; color: #111111; }
+h2 { font-size: 22px; font-weight: 700; color: #111111; }
+h3 { font-size: 17px; font-weight: 600; color: #111111; }
+h4 { font-size: 15px; font-weight: 600; color: #111111; }
+p  { font-size: 14px; color: #666666; }
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 240px;
+  min-height: 100vh;
+  background: #111111;
+  border-right: 1px solid #2a2a2a;
+  padding: 24px 16px;
+  position: fixed;
+  top: 0; left: 0;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.3);
+}
+
+.main-content {
+  margin-left: 240px;
+  padding: 32px;
+  min-height: 100vh;
+  background: #0f0f0f;
+}
+
+/* ===== CARDS ===== */
+.card {
+  background: #171717;
+  border-radius: 12px;
+  border: 1px solid #2a2a2a;
+  padding: 20px;
+}
+
+/* ===== BADGES ===== */
+.badge-success { background: #14240f; color: #4ade80; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 500; border: 1px solid #166534; }
+.badge-warning { background: #2a1f00; color: #D4AF37; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 500; border: 1px solid #D4AF3760; }
+.badge-danger  { background: #2a0f0f; color: #f87171; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 500; border: 1px solid #dc2626; }
+
+/* ===== PROGRESS BAR ===== */
+.progress-bar-container {
+  background: #2a2a2a;
+  height: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 10px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #D4AF37, #C9A227);
+  transition: width 0.5s ease;
+}
+
+/* ===== AUTH PAGES ===== */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0A0A0A;
+}
+
+.auth-card {
+  background: #171717;
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid #2a2a2a;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+/* ===== FORM STYLES ===== */
+.btn-primary {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #D4AF37, #C9A227);
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+.btn-success {
+  padding: 10px 20px;
+  background: #14240f;
+  color: #4ade80;
+  border: 1px solid #166534;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.btn-danger {
+  padding: 10px 20px;
+  background: #2a0f0f;
+  color: #f87171;
+  border: 1px solid #dc2626;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.btn-outline {
+  padding: 10px 20px;
+  background: transparent;
+  color: #D4AF37;
+  border: 1.5px solid #D4AF37 !important;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+/* ===== EVENT CARDS ===== */
+.event-card {
+  background: #171717;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #2a2a2a;
+  margin-bottom: 12px;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.event-card:hover {
+  border-color: #D4AF3760;
+  box-shadow: 0 4px 20px rgba(212,175,55,0.1);
+}
+
+/* ===== VENDOR CARDS ===== */
+.vendor-card {
+  background: #171717;
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid #2a2a2a;
+  margin-bottom: 12px;
+  transition: all 0.2s ease;
+}
+
+.vendor-card:hover {
+  border-color: #D4AF3760;
+  box-shadow: 0 4px 20px rgba(212,175,55,0.1);
+  transform: translateY(-2px);
+}
+
+/* ===== STAT CARDS ===== */
+.stat-card {
+  background: #171717;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #2a2a2a;
+  text-align: center;
+  flex: 1;
+}
+
+.stat-number {
+  font-size: 28px;
+  font-weight: 700;
+  color: #D4AF37;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #B8B8B8;
+  margin-top: 4px;
+}
